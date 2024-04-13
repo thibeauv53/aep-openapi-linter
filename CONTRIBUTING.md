@@ -4,13 +4,18 @@ We'd love to accept your patches and contributions to this project.
 
 ## Issues
 
-- You are welcome to [submit an issue](https://github.com/aep-dev/aep-openapi-linter/issues) with a bug report or a feature request.
-- If you are reporting a bug, please indicate which version of the package you are using and provide steps to reproduce the problem.
-- If you are submitting a feature request, please indicate if you are willing or able to submit a PR for it.
+- You are welcome to [submit an issue] with a bug report or a feature request.
+- If you are reporting a bug, please indicate which version of the package you
+  are using and provide steps to reproduce the problem.
+- If you are submitting a feature request, please indicate if you are willing
+  or able to submit a PR for it.
+
+[submit an issue]: https://github.com/aep-dev/aep-openapi-linter/issues
 
 ## Building and Testing
 
-To build and test the project locally, clone the repo and issue the following commands
+To build and test the project locally, clone the repo and issue the following
+commands
 
 ```sh
 npm install
@@ -19,26 +24,34 @@ npm test
 
 ## Adding new rules to the Spectral ruleset
 
-When you add a new rule there are a number of places you should consider including:
+When you add a new rule there are a number of places you should consider
+including:
 
-- `spectral.yaml` should define the new rule, possibly pointing to a new function used by the rule.
+- `spectral.yaml` should define the new rule, possibly pointing to a new
+  function used by the rule.
 - `functions` directory to hold any new function for the rule.
-- `test\<rulename>.test.js` should test at least the error and no-error cases of the rule.
+- `test\<rulename>.test.js` should test at least the error and no-error cases
+  of the rule.
 
 ## Coding conventions
 
 Please adhere to the following conventions for code submitted to this project:
 
-- Rules in the `spectral.yaml` ruleset file should start with "aep-" and be in alphabetical order.
+- Rules in the `spectral.yaml` ruleset file should start with "aep-" and be in
+  alphabetical order.
 - Functions and tests should follow the [Google JavaScript Style Guide].
-- When a rule is a custom function, the function name should be the rule name minus the "aep-" prefix.
+- When a rule is a custom function, the function name should be the rule name
+  minus the "aep-" prefix.
 - Rule severity:
-  - A rule for a **MUST** guideline in the AEPs or the OpenAPI specification should be `severity: error`
-  - A rule for a **SHOULD** guideline in the AEPs or the OpenAPI specification should be `severity: warn`
+  - A rule for a **MUST** guideline in the AEPs or the OpenAPI specification
+    should be `severity: error`
+  - A rule for a **SHOULD** guideline in the AEPs or the OpenAPI specification
+    should be `severity: warn`
   - Other rules may be either `severity: warn` or `severity: info`
   - Do not use `severity: hint` as it is not supported in the VSCode extension
 
-[Google JavaScript Style Guide]: https://google.github.io/styleguide/jsguide.html
+[Google JavaScript Style Guide]:
+  https://google.github.io/styleguide/jsguide.html
 
 ## Pull Request checklist
 

@@ -24,7 +24,9 @@ test('aep-delete-204-response should find errors', () => {
   };
   return linter.run(myOpenApiDocument).then((results) => {
     expect(results.length).toBe(1);
-    expect(results[0].path.join('.')).toBe('paths./api/Paths.delete.responses');
+    expect(results[0].path.join('.')).toBe(
+      'paths./api/Paths.delete.responses'
+    );
   });
 });
 

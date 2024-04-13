@@ -52,12 +52,10 @@ test('aep-request-body-not-allowed should find no errors', () => {
     openapi: '3.0.3',
     paths: {
       '/test1': {
-        get: {
-        },
+        get: {},
       },
       '/test2': {
-        delete: {
-        },
+        delete: {},
       },
       '/test3': {
         post: {

@@ -17,7 +17,7 @@ async function linterForRule(rule) {
     await migrateRuleset(rulesetFile, {
       format: 'commonjs',
       fs,
-    }),
+    })
     // eslint-disable-next-line import/no-dynamic-require,global-require
   )(m, (text) => require(require.resolve(text, { paths })));
   const ruleset = m.exports;

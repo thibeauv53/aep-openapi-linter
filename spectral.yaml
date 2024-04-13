@@ -1,5 +1,5 @@
 extends: spectral:oas
-functionsDir: "./functions"
+functionsDir: './functions'
 functions:
   - parameter-names-unique
 rules:
@@ -13,21 +13,22 @@ rules:
     description: A delete operation should have a 204 response.
     message: A delete operation should have a `204` response.
     severity: warn
-    formats: ["oas2", "oas3"]
+    formats: ['oas2', 'oas3']
     given: $.paths[*].delete.responses
     then:
       function: schema
       functionOptions:
         schema:
           oneOf:
-            - required: ["204"]
-            - required: ["202"]
+            - required: ['204']
+            - required: ['202']
 
   aep-parameter-names-unique:
-    description: All parameter names for an operation should be case-insensitive unique.
-    message: "{{error}}"
+    description:
+      All parameter names for an operation should be case-insensitive unique.
+    message: '{{error}}'
     severity: warn
-    formats: ["oas2", "oas3"]
+    formats: ['oas2', 'oas3']
     given: $.paths[*]
     then:
       function: parameter-names-unique
@@ -35,7 +36,7 @@ rules:
   aep-request-body-not-allowed:
     description: A get or delete operation must not accept a request body.
     severity: error
-    formats: ["oas3"]
+    formats: ['oas3']
     given:
       - $.paths[*].[get,delete].requestBody
     then:
@@ -45,7 +46,7 @@ rules:
     description: Flag optional request body -- common oversight.
     message: The body parameter is not marked as required.
     severity: info
-    formats: ["oas3"]
+    formats: ['oas3']
     given:
       - $.paths[*].[put,post,patch].requestBody
     then:
