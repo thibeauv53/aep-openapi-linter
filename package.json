@@ -11,7 +11,7 @@
   "author": "Mike Kistler",
   "license": "MIT",
   "repository": {
-    "url": "https://github.com/mkistler/aep-openapi-linter"
+    "url": "https://github.com/aep-dev/aep-openapi-linter"
   },
   "devDependencies": {
     "@stoplight/spectral-core": "^1.15.1",

@@ -23,19 +23,19 @@ The Spectral Ruleset requires Node version 20 or later.
 
 You can specify the ruleset directly on the command line:
 
-`spectral lint -r https://raw.githubusercontent.com/mkistler/aep-openapi-linter/main/spectral.yaml <api definition file>`
+`spectral lint -r https://raw.githubusercontent.com/aep-dev/aep-openapi-linter/main/spectral.yaml <api definition file>`
 
 Or you can create a Spectral configuration file (`.spectral.yaml`) that references the ruleset:
 
 ```yaml
 extends:
-  - https://raw.githubusercontent.com/mkistler/aep-openapi-linter/main/spectral.yaml
+  - https://raw.githubusercontent.com/aep-dev/aep-openapi-linter/main/spectral.yaml
 ```
 
 ### Example
 
 ```bash
-spectral lint -r https://raw.githubusercontent.com/mkistler/aep-openapi-linter/main/spectral.yaml petstore.yaml
+spectral lint -r https://raw.githubusercontent.com/aep-dev/aep-openapi-linter/main/spectral.yaml petstore.yaml
 ```
 
 ### Using the Spectral VSCode extension

@@ -4,7 +4,7 @@ We'd love to accept your patches and contributions to this project.
 
 ## Issues
 
-- You are welcome to [submit an issue](https://github.com/mkistler/aep-openapi-linter/issues) with a bug report or a feature request.
+- You are welcome to [submit an issue](https://github.com/aep-dev/aep-openapi-linter/issues) with a bug report or a feature request.
 - If you are reporting a bug, please indicate which version of the package you are using and provide steps to reproduce the problem.
 - If you are submitting a feature request, please indicate if you are willing or able to submit a PR for it.
 
@@ -52,7 +52,7 @@ Please use the following checklist to minimize the PR review churn.
 ## Code of Conduct
 
 This project's code of conduct can be found in the
-[CODE_OF_CONDUCT.md file](https://github.com/mkistler/aep-openapi-linter/blob/main/CODE_OF_CONDUCT.md)
+[CODE_OF_CONDUCT.md file](https://github.com/aep-dev/aep-openapi-linter/blob/main/CODE_OF_CONDUCT.md)
 (v1.4.0 of the [CoC](https://contributor-covenant.org/)).
 
 ## Contributor License Agreement
