@@ -1,4 +1,7 @@
-extends: spectral:oas
+extends:
+  - spectral:oas
+  - ./aep/0132.yaml
+  - ./aep/0135.yaml
 functionsDir: './functions'
 functions:
   - parameter-names-unique
@@ -9,20 +12,6 @@ rules:
   # Note: The Spectral VSCode extension will not display "hint" messages, so
   # use "info" rather than "hint".
 
-  aep-delete-204-response:
-    description: A delete operation should have a 204 response.
-    message: A delete operation should have a `204` response.
-    severity: warn
-    formats: ['oas2', 'oas3']
-    given: $.paths[*].delete.responses
-    then:
-      function: schema
-      functionOptions:
-        schema:
-          oneOf:
-            - required: ['204']
-            - required: ['202']
-
   aep-parameter-names-unique:
     description:
       All parameter names for an operation should be case-insensitive unique.
@@ -32,15 +21,6 @@ rules:
     given: $.paths[*]
     then:
       function: parameter-names-unique
-
-  aep-request-body-not-allowed:
-    description: A get or delete operation must not accept a request body.
-    severity: error
-    formats: ['oas3']
-    given:
-      - $.paths[*].[get,delete].requestBody
-    then:
-      function: falsy
 
   aep-request-body-optional:
     description: Flag optional request body -- common oversight.
