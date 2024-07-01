@@ -1,13 +1,13 @@
-const { linterForRule } = require('./utils');
+const { linterForAepRule } = require('../utils');
 
 let linter;
 
 beforeAll(async () => {
-  linter = await linterForRule('aep-delete-204-response');
+  linter = await linterForAepRule('0135', 'aep-135-response-204');
   return linter;
 });
 
-test('aep-delete-204-response should find errors', () => {
+test('aep-135-response-204 should find errors', () => {
   const myOpenApiDocument = {
     openapi: '3.0.3',
     paths: {
@@ -30,7 +30,7 @@ test('aep-delete-204-response should find errors', () => {
   });
 });
 
-test('aep-delete-204-response should find no errors', () => {
+test('aep-135-response-204 should find no errors', () => {
   const myOpenApiDocument = {
     openapi: '3.0.3',
     paths: {
