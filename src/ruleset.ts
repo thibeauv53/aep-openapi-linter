@@ -4,6 +4,7 @@ import parameterNamesUnique from "./functions/parameterNamesUnique";
 import { truthy, falsy, schema } from "@stoplight/spectral-functions";
 
 export default {
+    extends: [],
     formats: [oas2, oas3],
     rules: {
         "aep-parameter-names-unique": {
