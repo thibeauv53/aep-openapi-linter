@@ -4,7 +4,7 @@ const fs = require('fs');
 
 const AsyncFunction = (async () => {}).constructor;
 
-const rulesetFile = './spectral.yaml';
+const rulesetFile = './dist/ruleset.js';
 
 async function linterForRule(rule) {
   const linter = new Spectral();
