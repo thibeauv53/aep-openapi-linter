@@ -1,6 +1,6 @@
 import { oas2, oas3 } from "@stoplight/spectral-formats";
 import { DiagnosticSeverity } from "@stoplight/types";
-import parameter_names_unique from "./functions/parameter_names_unique";
+import parameterNamesUnique from "./functions/parameterNamesUnique";
 import { truthy, falsy, schema } from "@stoplight/spectral-functions";
 
 export default {
@@ -13,7 +13,7 @@ export default {
             formats: [oas2, oas3],
             given: "$.paths[*]",
             then: {
-                function: parameter_names_unique
+                function: parameterNamesUnique
             }
         },
         "aep-request-body-optional": {
