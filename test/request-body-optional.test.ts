@@ -56,12 +56,12 @@ testRule('aep-request-body-optional', [
       },
       {
         message: "The body parameter is not marked as required.",
-        path: ["paths", "/test1", "patch", "requestBody"],
+        path: ["paths", "/test2", "patch", "requestBody"],
         severity: DiagnosticSeverity.Warning,
       },
       {
         message: "The body parameter is not marked as required.",
-        path: ["paths", "/test1", "post", "requestBody"],
+        path: ["paths", "/test3", "post", "requestBody"],
         severity: DiagnosticSeverity.Warning,
       }
     ]
@@ -115,6 +115,6 @@ testRule('aep-request-body-optional', [
         },
       },
     },
-      errors: []
+    errors: []
   }
 ]);

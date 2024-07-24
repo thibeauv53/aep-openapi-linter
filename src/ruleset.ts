@@ -21,7 +21,7 @@ export default {
             description: "Flag optional request body -- common oversight.",
             message: "The body parameter is not marked as required.",
             severity: DiagnosticSeverity.Warning,
-            formats: ['oas3'],
+            formats: [oas3],
             given: ["$.paths[*].[put,post,patch].requestBody"],
             then: {
                 field: "required",
@@ -33,7 +33,7 @@ export default {
         "aep-132-http-body": {
             description: "A list operation must not accept a request body.",
             severity: DiagnosticSeverity.Error,
-            formats: ['oas3'],
+            formats: [oas3],
             given: ["$.paths[*].get.requestBody"],
             then: {
                 function: falsy
@@ -43,7 +43,7 @@ export default {
         "aep-135-http-body": {
             description: "A delete operation must not accept a request body.",
             severity: DiagnosticSeverity.Error,
-            formats: ['oas3'],
+            formats: [oas3],
             given: ["$.paths[*].delete.requestBody"],
             then: {
                 function: falsy
@@ -53,7 +53,7 @@ export default {
             description: "A delete operation should have a 204 response.",
             message: "A delete operation should have a `204` response.",
             severity: DiagnosticSeverity.Warning,
-            formats: ['oas2', 'oas3'],
+            formats: [oas2, oas3],
             given: "$.paths[*].delete.responses",
             then: {
                 function: schema,

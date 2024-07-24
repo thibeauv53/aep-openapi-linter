@@ -8,7 +8,7 @@
     "type-check": "tsc --noEmit --noErrorTruncation --pretty false --incremental false",
     "lint": "prettier --check . && eslint --cache --quiet --ext '.js' functions test",
     "lint-fix": "prettier --write . && eslint --cache --quiet --ext '.js' --fix functions test",
-    "test": "jest --coverage"
+    "test": "jest --coverage --verbose"
   },
   "exports": {
     ".": {

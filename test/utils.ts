@@ -5,8 +5,10 @@ import {
   Ruleset,
   RulesetDefinition,
 } from "@stoplight/spectral-core";
+import { assertValidRuleset } from "@stoplight/spectral-core";
 import { httpAndFileResolver } from "@stoplight/spectral-ref-resolver";
 import sourceRuleset from "../src/ruleset";
+import AggregateError from 'es-aggregate-error';
 
 export type RuleName = keyof Ruleset["rules"];
 
@@ -43,6 +45,7 @@ export default (ruleName: RuleName, tests: Scenario): void => {
 };
 
 export function createWithRules(rules: (keyof Ruleset["rules"])[]): Spectral {
+  try {
   const s = new Spectral({ resolver: httpAndFileResolver });
 
   s.setRuleset({
@@ -52,6 +55,12 @@ export function createWithRules(rules: (keyof Ruleset["rules"])[]): Spectral {
       return obj;
     }, {}),
   });
-
   return s;
+
+  } catch(e:any) {
+    if(e instanceof AggregateError) {
+      console.log("Ruleset contains errors");
+      console.log(e.errors);
+    }
+  }
 }
